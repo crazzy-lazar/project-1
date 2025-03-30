@@ -71,7 +71,7 @@ else:
 
     # 🔹 AdamW Optimizer for Stability
     model.compile(optimizer=tf.keras.optimizers.AdamW(learning_rate=0.00005), loss='mse')
-    model.fit(X_train, y_train, epochs=200, batch_size=16, validation_data=(X_test, y_test))
+    model.fit(X_train, y_train, epochs=50, batch_size=16, validation_data=(X_test, y_test))
 
     # ✅ Save the trained model
     model.save(model_path)
