@@ -16,7 +16,7 @@ file_path = "load_data/^NSEI_merged.csv"
 df = pd.read_csv(file_path, index_col=0, parse_dates=True)
 
 # ✅ Select Features (Removed MACD to reduce noise)
-features = ["Close", "Positive_News", "Negative_News", "Neutral_News", "SMA_50", "SMA_200", "RSI"]
+features = ["Close", "SMA_50", "SMA_200", "RSI"]
 df = df[features]
 
 # ✅ Scale 'Close' Price Separately
